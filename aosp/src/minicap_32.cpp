@@ -140,8 +140,6 @@ public:
                 return err;
             }
         }
-        MCINFO("mBuffer.width %d", mBuffer.width);
-        MCINFO("mBuffer.format %d", mBuffer.format);
         frame->data = mBuffer.data;
         frame->format = convertFormat(mBuffer.format);
         frame->width = mBuffer.width;

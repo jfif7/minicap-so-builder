@@ -76,7 +76,7 @@ case "$command" in
     source="https://android.googlesource.com/mirror/manifest"
     shift
     cd "$MIRROR_PATH"
-    test -d .repo || repo init -u "$source" --mirror
+    repo init -u "$source" --mirror
     repo sync "$@"
     ;;
   checkout-branch)
@@ -89,7 +89,7 @@ case "$command" in
     branch="$2"
     shift; shift
     cd "$AOSP_PATH"
-    test -d .repo || repo init --partial-clone -u "$manifest" -b "$branch"
+    repo init --partial-clone -u "$manifest" -b "$branch"
     repo sync "$@"
     ;;
   build-all)

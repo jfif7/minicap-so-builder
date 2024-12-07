@@ -33,10 +33,8 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update && apt-get install -y \
     openjdk-21-jdk
 
-# RUN curl https://storage.googleapis.com/git-repo-downloads/repo \
-#     -o /usr/local/bin/repo && chmod +x /usr/local/bin/repo
-
-ADD repo /usr/local/bin/
+RUN curl https://storage.googleapis.com/git-repo-downloads/repo \
+    -o /usr/local/bin/repo && chmod +x /usr/local/bin/repo
 
 RUN chmod +x /usr/local/bin/repo
 
@@ -51,7 +49,4 @@ ADD aosp.sh /usr/local/bin/
 
 RUN ln -s /usr/local/bin/aosp.sh /aosp.sh
 
-# CMD ["/aosp.sh" "--help"]
-
-# Set the entrypoint to bash
-ENTRYPOINT ["/bin/bash"]
+CMD ["/aosp.sh", "--help"]

@@ -8,6 +8,6 @@ Still doing some cleanup so don't expect to run this repo.
 
 Todos:
 
-- [ ] Remove all windows related path
+- [x] Remove all windows related path
 - [ ] Clean up building process
 - [ ] Write a better guide

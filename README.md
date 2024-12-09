@@ -67,7 +67,7 @@ make sure `AOSP_DIR` is properly set, then
 
 ```bash
 cd aosp
-make -j 1
+make -j 1 libs/android-32/x86_64/minicap.so
 ```
 
 Congratulation! You're done! Now just wait for the compilation to stop on some random error and spent a whole day trying to figure out which version of which third party apps is compatible with your current branch of aosp and repeat this process until you're on the edge of quitting and finally get a successfull compile.
